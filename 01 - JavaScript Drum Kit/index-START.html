@@ -71,6 +71,13 @@
     // console.log(key);
     key.classList.add('playing');
   });
+
+  const keys = document.querySelectorAll('.key');
+  keys.forEach(key => key.addEventListener('transitionend', removeTransition = (e) =>{
+    // console.log(e);
+    if(e.propertyName !== 'transform') return; // skip it if its not true
+    console.log(e.propertyName);
+  }))
 </script>
 </body>
 </html>
